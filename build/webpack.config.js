@@ -31,7 +31,7 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'assets/public'),
+            directory: path.resolve(__dirname, 'assets/favicon'),
         },
         port: 8080,
         open: true,
@@ -125,7 +125,7 @@ module.exports = {
                     to: `${PATHS.dist}/assets/img`,
                 },
                 {
-                    from: `${PATHS.src}/assets/public`,
+                    from: `${PATHS.src}/assets/favicon`,
                     to: `${PATHS.dist}`,
                 },
             ],
