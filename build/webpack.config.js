@@ -113,8 +113,8 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: `${PATHS.src}/css`,
-                    to: `${PATHS.dist}/css`,
+                    from: `${PATHS.src}/style`,
+                    to: `${PATHS.dist}/style`,
                 },
                 {
                     from: `${PATHS.src}/assets/fonts`,
