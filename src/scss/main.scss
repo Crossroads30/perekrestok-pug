@@ -1,9 +1,17 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 16px;
+}
+
 @import "utils/libs";
 @import "utils/vars";
 @import "utils/mixins";
-@import "utils/fonts";
-@import "utils/reset";
-
-body {
-  background-color: #b4bc25
-}
+// @import "utils/fonts";
+// @import "utils/reset";
+@import "modules/conteiner";
+@import "modules/about";
+@import "modules/header";
+@import "modules/footer";

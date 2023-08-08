@@ -1,0 +1,18 @@
+@mixin main-font($family:'Geologica', $style: normal, $size:1.6rem, $weight:600, $height:normal, $spacing:0.3rem, $color:$black-color, $shadow:3px 3px 3px $primary-color) {
+    font-family         :$family;
+    font-style          :$style;
+    font-size           :$size;
+    font-weight         :$weight;
+    line-height         :$height;
+    letter-spacing      :$spacing; 
+    color               :$color;
+    text-shadow         :$shadow;
+}
+
+@mixin flex ($display: flex, $direction: row, $items: center, $j-content: space-between) {
+    display             :$display;
+    flex-direction      :$direction;
+    align-items         :$items;
+    justify-content     :$j-content;
+}
+
