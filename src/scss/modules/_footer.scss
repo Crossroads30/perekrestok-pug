@@ -35,4 +35,7 @@
         border-left: 17px solid #4dbb98;
         filter: blur(1px);
     }
+    & a:hover {
+        text-decoration: underline;
+    }
 }

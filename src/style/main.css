@@ -182,3 +182,6 @@ body {
   -webkit-filter: blur(1px);
           filter: blur(1px);
 }
+.footer a:hover {
+  text-decoration: underline;
+}
