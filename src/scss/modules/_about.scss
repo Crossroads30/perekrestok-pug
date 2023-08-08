@@ -1,0 +1,21 @@
+.about {
+    @include flex($direction: column, $items: flex-start);
+    width: 100%;
+    padding: 6rem;
+    background-image: url(../../../src/assets/img/about-bgr.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &-text {
+        display: block;
+        width: 850px;
+        @include main-font($size: 1.4rem, $weight: 400, $height: 1.8rem, $spacing: 0.2rem, $color: $about-primary-color, $shadow: 2px 2px 2px $black-color);
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+    &-text:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+    &-text:last-child {
+      margin-top: 3.5rem;
+
+    }
+}

@@ -1,0 +1,29 @@
+.header {
+  @include flex;
+  width: 100%;
+  // max-width: 144rem;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2.5rem 6rem;
+  &__title {
+    @include main-font($size:1.6rem)
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  &-item {
+    margin: 0 1.5rem;
+    @include main-font($size:1.2rem, $shadow: none);
+  }
+  &-link {
+    text-decoration: none;
+    color: $black-color;
+    &.selected {
+      color: $selected-color;
+    }
+  }
+}
