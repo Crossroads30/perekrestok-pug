@@ -1,0 +1,15 @@
+.videos {
+  width: 100%;
+  background-image: url(../../../src/assets/img/bgrs/videos-bgr.png);
+  background-size: 100% 100%;
+  padding: 6rem;
+  &__list {
+    @include flex($j-content: space-around);
+    flex-wrap: wrap;
+    gap: 2%;
+    .item-link {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

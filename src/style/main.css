@@ -22,46 +22,6 @@ body {
           justify-content: space-between;
 }
 
-.about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  padding: 6rem;
-  background-image: url(../../../src/assets/img/about-bgr.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-.about-text {
-  display: block;
-  width: 850px;
-  font-family: "Geologica";
-  font-style: normal;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.8rem;
-  letter-spacing: 0.2rem;
-  color: #acf5df;
-  text-shadow: 2px 2px 2px #000000;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-.about-text:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-.about-text:last-child {
-  margin-top: 3.5rem;
-}
-
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,6 +79,74 @@ body {
 }
 .nav-link.selected {
   color: #ff0000;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 6rem;
+  background-image: url(../../../src/assets/img/bgrs/about-bgr.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.about-text {
+  display: block;
+  width: 850px;
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  letter-spacing: 0.2rem;
+  color: #acf5df;
+  text-shadow: 2px 2px 2px #000000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.about-text:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.about-text:last-child {
+  margin-top: 3.5rem;
+}
+
+.videos {
+  width: 100%;
+  background-image: url(../../../src/assets/img/bgrs/videos-bgr.png);
+  background-size: 100% 100%;
+  padding: 6rem;
+}
+.videos__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2%;
+}
+.videos__list .item-link {
+  display: block;
+  margin-bottom: 1.5rem;
 }
 
 .footer {
