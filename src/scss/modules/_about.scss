@@ -2,7 +2,7 @@
     @include flex($direction: column, $items: flex-start);
     width: 100%;
     padding: 6rem;
-    background-image: url(../../../src/assets/img/about-bgr.png);
+    background-image: url(../../../src/assets/img/bgrs/about-bgr.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     &-text {
