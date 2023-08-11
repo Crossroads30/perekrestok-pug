@@ -11,8 +11,8 @@ html(lang='en')
     title Pug example
   body
     .conteiner
-      +header
+      block header
       main.main
         block content 
       +footer
-      include _scripts
+  include _scripts

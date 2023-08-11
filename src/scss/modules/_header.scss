@@ -22,8 +22,8 @@
   &-link {
     text-decoration: none;
     color: $black-color;
-    &.selected {
-      color: $selected-color;
-    }
   }
+}
+.selected {
+  color: $selected-color;
 }
