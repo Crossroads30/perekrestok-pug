@@ -1,0 +1,94 @@
+.albums {
+    @include flex($items: flex-start, $j-content: center);
+    width: 100%;
+    height: 800px;
+    padding: 6rem;
+    background: url(../../../src/assets/img/bgrs/album-bgr.png);
+    // background-image: url(../../../assets/img/bgrs/album-bgr.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &__wrapper {
+        @include flex($items: none);
+        @include main-font($size: 1rem, $weight: 400);
+        width: 45rem;
+        
+    }
+}
+
+.album1 {
+    @include flex($direction: column, $j-content: none);
+    cursor: pointer;
+    &__title {
+        padding-bottom: 1.2rem;
+        cursor: pointer;
+    }
+    &__cover {
+        width: 15rem;
+        height: 15rem;
+        background: url(../../../src/assets/img/album-covers/perekrestok-cover.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    &__release {
+        padding-top: 1.2rem;
+        cursor: pointer;
+    }
+    &__songs {
+        margin-top: 1.2rem;
+        width: 250px;
+        height: 0px;
+        overflow: hidden;
+        background: rgba(101, 224, 138, 0.5);
+        transition: all 0.3s;
+        pointer-events: none;
+        p {
+          padding: 1rem;
+          font-size: .8rem;
+          line-height: 1.2rem;
+          letter-spacing: .1rem;
+        }
+    }
+    &:hover .album1__songs {
+        transition: all 0.3s;
+        height: 230px;
+    }
+}
+
+.album2 {
+    @include flex($direction: column, $j-content: none);
+    cursor: pointer;
+    &__title {
+        padding-bottom: 1.2rem;
+        cursor: pointer;
+    }
+    &__cover {
+        width: 15rem;
+        height: 15rem;
+        background: url(../../../src/assets/img/album-covers/man-on-moon-cover.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    &__release {
+        padding-top: 1.2rem;
+        cursor: pointer;
+    }
+    &__songs {
+        margin-top: 1.2rem;
+        width: 250px;
+        height: 0px;
+        overflow: hidden;
+        background: rgba(101, 224, 138, 0.5);
+        transition: all 0.3s;
+        pointer-events: none;
+        p {
+          padding: 1rem;
+          font-size: .8rem;
+          line-height: 1.2rem;
+          letter-spacing: .1rem;
+        }
+    }
+    &:hover .album2__songs {
+      transition: all 0.3s;
+      height: 230px;
+  }
+}
