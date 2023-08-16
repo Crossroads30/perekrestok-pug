@@ -1,5 +1,11 @@
 extends ../layout/layout
 
+block styles
+  +songs-style
 block header 
   +header-songs   
 block content
+  section.songs 
+    +song-list 
+block scripts
+  +songs-script
