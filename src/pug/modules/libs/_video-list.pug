@@ -1,0 +1,11 @@
+- var list = [ "Океан", "Сон Алеси", "Лета почти уже нет...", "Человек на луне", "Кухня любви", "Под звёздами вселенной", "Межпланетный экспресс", "Колыбельная", "Перекрёсток", "Наконец-то Рождество" ]
+- var imgs = [ { "Океан": "../../../src/assets/img/video-covers/ocean.png"}, { "Сон Алеси": "../../../src/assets/img/video-covers/alesya_dream.png"}, { "Лета почти уже нет...": "../../../src/assets/img/video-covers/summer_almost_gone.png"}, { "Человек на луне": "../../../src/assets/img/video-covers/man_on_a_moon.png"}, { "Кухня любви": "../../../src/assets/img/video-covers/love_kitchen.png"}, { "Под звёздами вселенной":"../../../src/assets/img/video-covers/under_the_stars.png"}, {"Межпланетный экспресс": "../../../src/assets/img/video-covers/space_express.png"}, { "Колыбельная":"../../../src/assets/img/video-covers/lulaby.png"}, {"Перекрёсток": "../../../src/assets/img/video-covers/crossroads.png"}, {"Наконец-то Рождество": "../../../src/assets/img/video-covers/сhristmas.png"} ]
+ 
+mixin videos-list 
+   ul.videos__list
+    each val, index in imgs
+      each src, name in val  
+        li.videos__list-item(id= index + 1) 
+          p.videos__title= name
+          a.item-link(href="#")   
+            img(src= src , alt="screenshot")
