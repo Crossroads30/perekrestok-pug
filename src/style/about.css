@@ -1,0 +1,188 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 16px;
+}
+
+.conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2.5rem 6rem;
+}
+.header__title {
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.3rem;
+  color: #000000;
+  text-shadow: 3px 3px 3px #5ff0c2;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+.nav-item {
+  margin: 0 1.5rem;
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.3rem;
+  color: #000000;
+  text-shadow: none;
+}
+.nav-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.selected {
+  color: #ff0000;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 6rem;
+  background-image: url(../../../src/assets/img/bgrs/about-bgr.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.about-text {
+  display: block;
+  width: 850px;
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  letter-spacing: 0.2rem;
+  color: #acf5df;
+  text-shadow: 2px 2px 2px #000000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.about-text:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.about-text:last-child {
+  margin-top: 3.5rem;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  min-height: 7rem;
+  padding: 0 6rem;
+  background: #141414;
+}
+.footer a,
+.footer p {
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.3rem;
+  color: #000000;
+  text-shadow: 3px 3px 3px #5ff0c2;
+  text-decoration: none;
+}
+.footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .youtube {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 40px;
+  border: 3px solid #141414;
+  border-radius: 30%;
+  -webkit-box-shadow: 3px 3px 3px #5ff0c2;
+          box-shadow: 3px 3px 3px #5ff0c2;
+  margin-left: 0.4rem;
+  cursor: pointer;
+}
+.footer .youtube::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: 8px;
+  border: 8px solid transparent;
+  border-left: 17px solid #4dbb98;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+.footer a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,372 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 16px;
+}
+
+.conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2.5rem 6rem;
+}
+.header__title {
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.3rem;
+  color: #000000;
+  text-shadow: 3px 3px 3px #5ff0c2;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+.nav-item {
+  margin: 0 1.5rem;
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.3rem;
+  color: #000000;
+  text-shadow: none;
+}
+.nav-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.selected {
+  color: #ff0000;
+}
+
+.songs {
+  width: 100%;
+  background-image: url(../../../src/assets/img/bgrs/songs-bgr.png);
+  background-size: 100% 100%;
+  padding: 6rem;
+}
+.songs__list {
+  width: 100%;
+}
+.songs__list:not(:first-child) {
+  cursor: pointer;
+}
+
+.song {
+  position: relative;
+  width: 100%;
+}
+.song__wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 20px;
+}
+.song__title, .song__album {
+  font-family: none;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px #000000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.song::after {
+  position: absolute;
+  left: 0%;
+  bottom: -10%;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background: #fff;
+}
+.song:not(:first-child):hover * {
+  color: #5ff0c2;
+  text-shadow: 2px 2px 2px #000000;
+}
+.song:not(:first-child):hover::after {
+  background: #5ff0c2;
+}
+.song:not(:first-child) * {
+  cursor: pointer;
+}
+.song:first-child {
+  pointer-events: none;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 24rem;
+  margin: 0 auto;
+}
+.text .btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.text__music {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 8rem;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  padding: 4px 15px 4px 4px;
+  cursor: pointer;
+}
+.text__music:hover .text__play-btn {
+  background: url("../../../src/assets/icons/player-icon/play_green.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.text__music:hover .pause-btn {
+  background: url("../../../src/assets/icons/player-icon/pause_green.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.text__music:hover p {
+  color: #5ff0c2;
+}
+.text__play-btn {
+  width: 30px;
+  height: 30px;
+  background: url("../../../src/assets/icons/player-icon/play.svg");
+  background-size: cover;
+  border: 0;
+  padding: 0;
+}
+.text .btn-text, .text .back-btn-text {
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.2rem;
+  color: #000000;
+  text-shadow: none;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.text__field {
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  letter-spacing: 0;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px #5ff0c2;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 2px #000000;
+  background: rgba(0, 120, 201, 0.5);
+  padding: 20px;
+  pointer-events: none;
+  white-space: pre-line;
+}
+.text__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 8rem;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  padding: 4px 15px 4px 4px;
+  cursor: pointer;
+}
+.text__close:hover button {
+  background: url("../../../src/assets/icons/player-icon/icons-close_green.svg");
+  background-size: cover;
+}
+.text__close:hover p {
+  color: #5ff0c2;
+}
+.text__back-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background: url("../../../src/assets/icons/player-icon/icons-close.svg");
+  background-size: cover;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  border: 0;
+  padding: 0;
+}
+
+.pause-btn {
+  width: 30px;
+  height: 30px;
+  background: url("../../../src/assets/icons/player-icon/pause.svg");
+  background-size: cover;
+  border: 0;
+  padding: 0;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  min-height: 7rem;
+  padding: 0 6rem;
+  background: #141414;
+}
+.footer a,
+.footer p {
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.3rem;
+  color: #000000;
+  text-shadow: 3px 3px 3px #5ff0c2;
+  text-decoration: none;
+}
+.footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .youtube {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 40px;
+  border: 3px solid #141414;
+  border-radius: 30%;
+  -webkit-box-shadow: 3px 3px 3px #5ff0c2;
+          box-shadow: 3px 3px 3px #5ff0c2;
+  margin-left: 0.4rem;
+  cursor: pointer;
+}
+.footer .youtube::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: 8px;
+  border: 8px solid transparent;
+  border-left: 17px solid #4dbb98;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+.footer a:hover {
+  text-decoration: underline;
+}
