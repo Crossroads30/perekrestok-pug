@@ -25,6 +25,7 @@ body {
 }
 
 .header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,6 +82,82 @@ body {
 .header .selected {
   color: #ff0000;
 }
+.header .burger {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.header .burger__line, .header .burger__line::after, .header .burger__line::before {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+}
+.header .burger__line::before {
+  content: "";
+  margin-top: 4px;
+}
+.header .burger__line::after {
+  content: "";
+  margin-top: -10px;
+}
+.header .burger__line, .header .burger__line::before, .header .burger__line::after, .header .burger::before, .header .burger::after {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.header .burger__open.burger__line, .header .burger__open.burger__line::before, .header .burger__open.burger__line::after {
+  background: rgba(255, 255, 255, 0);
+}
+.header .burger__open.burger__line::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #000000;
+  margin-top: 0px;
+}
+.header .burger__open.burger__line::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background: #000000;
+  margin-top: -2px;
+}
+.header .burger-menu {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #5ff0c2;
+  top: 100%;
+  left: -100%;
+  z-index: 10;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.header .burger-menu__item {
+  font-family: "Geologica";
+  font-style: normal;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.3rem;
+  color: #000000;
+  text-shadow: 3px 3px 3px #5ff0c2;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+.header .burger-menu__item:first-child {
+  margin-top: 1rem;
+}
+.header .burger-menu__item:last-child {
+  margin-bottom: 1rem;
+}
+.header .burger-menu__open {
+  left: 0;
+}
 @media screen and (max-width: 1366px) {
   .header {
     padding: 1.5rem 3rem;
@@ -113,12 +190,17 @@ body {
     padding: 1rem;
   }
   .header__title {
-    font-size: 0.7rem;
+    font-size: 1.2rem;
     letter-spacing: 0.2rem;
     text-shadow: 1px 1px 1px #5ff0c2;
   }
-  .header .nav-item {
+  .header .nav {
     display: none;
+  }
+  .header .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -284,6 +366,7 @@ body {
 @media screen and (max-width: 500px) {
   .footer {
     padding: 1rem;
+    min-height: 52px;
   }
   .footer a,
   .footer p {
