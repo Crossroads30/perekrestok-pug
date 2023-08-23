@@ -1,22 +1,60 @@
 .about {
     @include flex($direction: column, $items: flex-start);
     width: 100%;
-    padding: 6rem;
+    padding: 5rem;
     background-image: url(../../../src/assets/img/bgrs/about-bgr.png);
     // background-image: url(../../../assets/img/bgrs/about-bgr.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     &-text {
         display: block;
-        width: 850px;
-        @include main-font($size: 1.4rem, $weight: 400, $height: 1.8rem, $spacing: 0.2rem, $color: $about-primary-color, $shadow: 2px 2px 2px $black-color);
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        max-width: 70%;
+        @include main-font(
+            $size: 1.6rem,
+            $weight: 400,
+            $height: 2rem,
+            $spacing: 0.4rem,
+            $color: $about-primary-color,
+            $shadow: 2px 2px 2px $black-color
+        );
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     &-text:not(:last-child) {
         margin-bottom: 1.5rem;
     }
     &-text:last-child {
-      margin-top: 3.5rem;
+        margin-top: 3.5rem;
+    }
+    @media screen and (max-width: $laptop) {
+        padding: 3rem;
+        &-text {
+            font-size: .9rem;
+            font-weight: 400;
+            line-height: 1.4rem; 
+            letter-spacing: 0.3rem;
+        }
+    }
 
+    @media screen and (max-width: $tablet) {
+        padding: 1.5rem;
+        &-text {
+            font-size: .8rem;
+            font-weight: 400;
+            line-height: 1rem; 
+            letter-spacing: 0.2rem;
+            text-shadow: 1px 1px 1px $black-color;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        align-items: center;
+        padding: 1rem;
+        &-text {
+            max-width: 100%;
+            font-size: .6rem;
+            font-weight: 400;
+            line-height: .8rem; 
+            letter-spacing: 0.2rem;
+        }
     }
 }

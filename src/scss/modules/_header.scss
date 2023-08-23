@@ -1,29 +1,70 @@
 .header {
-  @include flex;
-  width: 100%;
-  // max-width: 144rem;
-  margin: 0 auto;
-  background: #fff;
-  padding: 2.5rem 6rem;
-  &__title {
-    @include main-font($size:1.6rem)
-  }
-}
+    @include flex;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2.8rem 5rem;
+    &__title {
+        @include main-font($size: 1.6rem);
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding-left: 0;
+        &-item {
+            margin: 0 1rem;
+            @include main-font($size: 1.3rem, $shadow: none);
+        }
+        &-link {
+            text-decoration: none;
+            color: $black-color;
+        }
+    }
+    .selected {
+        color: $selected-color;
+    }
 
-.nav {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  padding-left: 0;
-  &-item {
-    margin: 0 1.5rem;
-    @include main-font($size:1.2rem, $shadow: none);
-  }
-  &-link {
-    text-decoration: none;
-    color: $black-color;
-  }
-}
-.selected {
-  color: $selected-color;
+    @media screen and (max-width: $laptop) {
+        padding: 1.5rem 3rem;
+        &__title {
+            font-size: 1.2rem;
+        }
+        .nav {
+            &-item {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+                letter-spacing: 0.2rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 1.5rem;
+        &__title {
+            font-size: 0.8rem;
+            text-shadow: 2px 2px 2px $primary-color;
+        }
+        .nav {
+            &-item {
+                margin: 0 0.3rem;
+                font-size: 0.6rem;
+                letter-spacing: 0.1rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 1rem;
+        &__title {
+            font-size: 0.7rem;
+            letter-spacing: 0.2rem;
+            text-shadow: 1px 1px 1px $primary-color;
+        }
+        .nav {
+            &-item {
+                display: none;
+            }
+        }
+    }
 }
