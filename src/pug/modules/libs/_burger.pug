@@ -1,0 +1,36 @@
+- var page_names =[ { "главная": "index.html"},{ "видео": "videos.html"},{ "песни": "songs.html"}, {"альбомы": "albums.html"}, {"новости": "news.html" }]
+
+mixin burger-about
+  .burger
+    span.burger__line
+  ul.burger-menu
+    each val, key in page_names 
+      each url, name in val  
+        li(class="burger-menu__item")   
+          a(href= url)(class= (key === 0 ? "nav-link selected": "nav-link"))= name 
+    
+
+mixin burger-videos
+  .burger
+    span.burger__line
+    .burger__nav 
+
+
+mixin burger-songs
+  .burger
+    span.burger__line
+    .burger__nav 
+
+
+mixin burger-albums
+  .burger
+    span.burger__line
+    .burger__nav 
+
+
+mixin burger-news
+  .burger
+    span.burger__line
+    .burger__nav 
+
+  

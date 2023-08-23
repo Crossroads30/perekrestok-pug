@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     @include flex;
     width: 100%;
     margin: 0 auto;
@@ -23,6 +24,78 @@
     }
     .selected {
         color: $selected-color;
+    }
+
+    .burger {
+        display: none;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        &__line {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: $black-color;
+            &::before {
+                content: '';
+                @extend .burger__line;
+                margin-top: 4px;
+            }
+            &::after {
+                content: '';
+                @extend .burger__line;
+                margin-top: -10px;
+            }
+        }
+        // &:hover span,
+        // &:hover span::after,
+        // &:hover span::before {
+        //     background: #128e69;
+        // }
+        &__line,
+        &::before,
+        &::after {
+            transition: all 0.2s ease-out;
+        }
+        &__open.burger__line {
+            background: rgba(255, 255, 255, 0);
+        }
+        &__open.burger__line::before {
+            transform: rotate(45deg);
+            background: $black-color;
+            margin-top: 0px;
+        }
+        &__open.burger__line::after {
+            transform: rotate(-45deg);
+            background: $black-color;
+            margin-top: -2px;
+        }
+        &-menu {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: $primary-color;
+            top: 100%;
+            left: -100%;
+            z-index: 10;
+            transition: all 0.2s ease-out;
+            &__item {
+                @include main-font($size: .8rem);
+                margin-left: 1rem;
+                margin-bottom: 2rem;
+            }
+            &__item:first-child {
+                margin-top: 1rem;
+            }
+            &__item:last-child {
+                margin-bottom: 1rem;
+            }
+        }
+        &-menu__open {
+            left: 0;
+        }
+        
     }
 
     @media screen and (max-width: $laptop) {
@@ -57,14 +130,15 @@
     @media screen and (max-width: $mobile) {
         padding: 1rem;
         &__title {
-            font-size: 0.7rem;
+            font-size: 1.2rem;
             letter-spacing: 0.2rem;
             text-shadow: 1px 1px 1px $primary-color;
         }
         .nav {
-            &-item {
-                display: none;
-            }
+            display: none;
+        }
+        .burger {
+            display: flex;
         }
     }
 }
