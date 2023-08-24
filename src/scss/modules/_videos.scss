@@ -3,15 +3,16 @@
     background-image: url(../../../src/assets/img/bgrs/videos-bgr.png);
     // background-image: url(../../../assets/img/bgrs/videos-bgr.png);
     background-size: 100% 100%;
-    padding: 6rem;
+    padding: 5rem;
     &__list {
         @include flex($j-content: space-around);
         flex-wrap: wrap;
-        gap: 2%;
-        .item-link {
-            display: block;
-            margin-bottom: 1.5rem;
-        }
+        gap: 3%;
+    }
+    &__item-link {
+        display: block;
+        margin-bottom: 1.5rem;
+        width: 450px;
     }
     &__title {
         color: $primary-color;
@@ -19,6 +20,9 @@
         order: 1;
         padding-bottom: 10px;
         text-shadow: $text-shadow;
+    }
+    &__list-item img {
+        width: 100%;
     }
 }
 
@@ -54,4 +58,74 @@
 
 .back-btn:hover {
   background: $success-color;
+}
+
+@media screen and (max-width: 1596px) {
+    .videos {
+        padding: 3rem;
+        &__title {
+            font-size: .6rem;
+            padding-bottom: 10px;
+            text-shadow: $text-shadow;
+        }
+        &__item-link {
+            width: 350px;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: $laptop) {
+    .videos {
+        padding: 1rem;
+        &__list {
+            gap: 4%;
+        }
+        &__title {
+            font-size: .4rem;
+            padding-bottom: 8px;
+            text-shadow: $text-shadow;
+        }
+        &__item-link {
+            width: 300px;
+            margin-bottom: .7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .videos {
+        padding: 1.2rem;
+        &__list {
+            gap: 3%;
+        }
+        &__title {
+            font-size: .4rem;
+            padding-bottom: 8px;
+            text-shadow: $text-shadow;
+        }
+        &__item-link {
+            width: 220px;
+            margin-bottom: .7rem;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .videos {
+        padding: 1rem;
+        &__list {
+            gap: 3%;
+        }
+        &__title {
+            font-size: .3rem;
+            letter-spacing: .2rem;
+            padding-bottom: 5px;
+            text-shadow: $text-shadow;
+        }
+        &__item-link {
+            width: 180px;
+            margin-bottom: .7rem;
+        }
+    }
 }

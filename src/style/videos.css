@@ -24,6 +24,10 @@ body {
   margin: 0 auto;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .header {
   position: relative;
   display: -webkit-box;
@@ -41,7 +45,7 @@ body {
           justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  background: #fff;
+  background: #ffffff;
   padding: 2.8rem 5rem;
 }
 .header__title {
@@ -140,7 +144,7 @@ body {
 .header .burger-menu__item {
   font-family: "Geologica";
   font-style: normal;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.3rem;
@@ -157,10 +161,11 @@ body {
 }
 .header .burger-menu__open {
   left: 0;
+  overflow: hidden;
 }
 @media screen and (max-width: 1366px) {
   .header {
-    padding: 1.5rem 3rem;
+    padding: 1.2rem 3rem;
   }
   .header__title {
     font-size: 1.2rem;
@@ -173,7 +178,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .header {
-    padding: 1.5rem;
+    padding: 1.2rem 1.5rem;
   }
   .header__title {
     font-size: 0.8rem;
@@ -187,10 +192,10 @@ body {
 }
 @media screen and (max-width: 500px) {
   .header {
-    padding: 1rem;
+    padding: 0.8rem 1rem;
   }
   .header__title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.2rem;
     text-shadow: 1px 1px 1px #5ff0c2;
   }
@@ -208,7 +213,7 @@ body {
   width: 100%;
   background-image: url(../../../src/assets/img/bgrs/videos-bgr.png);
   background-size: 100% 100%;
-  padding: 6rem;
+  padding: 5rem;
 }
 .videos__list {
   display: -webkit-box;
@@ -225,11 +230,12 @@ body {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2%;
+  gap: 3%;
 }
-.videos__list .item-link {
+.videos__item-link {
   display: block;
   margin-bottom: 1.5rem;
+  width: 450px;
 }
 .videos__title {
   color: #5ff0c2;
@@ -246,6 +252,9 @@ body {
           order: 1;
   padding-bottom: 10px;
   text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+}
+.videos__list-item img {
+  width: 100%;
 }
 
 .video__wrapper {
@@ -287,6 +296,72 @@ body {
   background: #26de81;
 }
 
+@media screen and (max-width: 1596px) {
+  .videos {
+    padding: 3rem;
+  }
+  .videos__title {
+    font-size: 0.6rem;
+    padding-bottom: 10px;
+    text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+  }
+  .videos__item-link {
+    width: 350px;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .videos {
+    padding: 1rem;
+  }
+  .videos__list {
+    gap: 4%;
+  }
+  .videos__title {
+    font-size: 0.4rem;
+    padding-bottom: 8px;
+    text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+  }
+  .videos__item-link {
+    width: 300px;
+    margin-bottom: 0.7rem;
+  }
+}
+@media screen and (max-width: 1010px) {
+  .videos {
+    padding: 1.2rem;
+  }
+  .videos__list {
+    gap: 3%;
+  }
+  .videos__title {
+    font-size: 0.4rem;
+    padding-bottom: 8px;
+    text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+  }
+  .videos__item-link {
+    width: 220px;
+    margin-bottom: 0.7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .videos {
+    padding: 1rem;
+  }
+  .videos__list {
+    gap: 3%;
+  }
+  .videos__title {
+    font-size: 0.3rem;
+    letter-spacing: 0.2rem;
+    padding-bottom: 5px;
+    text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+  }
+  .videos__item-link {
+    width: 180px;
+    margin-bottom: 0.7rem;
+  }
+}
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,7 +487,7 @@ body {
 }
 @media screen and (max-width: 500px) {
   .footer {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     min-height: 52px;
   }
   .footer a,

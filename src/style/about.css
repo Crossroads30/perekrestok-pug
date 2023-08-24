@@ -24,6 +24,10 @@ body {
   margin: 0 auto;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .header {
   position: relative;
   display: -webkit-box;
@@ -41,7 +45,7 @@ body {
           justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  background: #fff;
+  background: #ffffff;
   padding: 2.8rem 5rem;
 }
 .header__title {
@@ -140,7 +144,7 @@ body {
 .header .burger-menu__item {
   font-family: "Geologica";
   font-style: normal;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.3rem;
@@ -157,10 +161,11 @@ body {
 }
 .header .burger-menu__open {
   left: 0;
+  overflow: hidden;
 }
 @media screen and (max-width: 1366px) {
   .header {
-    padding: 1.5rem 3rem;
+    padding: 1.2rem 3rem;
   }
   .header__title {
     font-size: 1.2rem;
@@ -173,7 +178,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .header {
-    padding: 1.5rem;
+    padding: 1.2rem 1.5rem;
   }
   .header__title {
     font-size: 0.8rem;
@@ -187,10 +192,10 @@ body {
 }
 @media screen and (max-width: 500px) {
   .header {
-    padding: 1rem;
+    padding: 0.8rem 1rem;
   }
   .header__title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.2rem;
     text-shadow: 1px 1px 1px #5ff0c2;
   }
@@ -259,9 +264,9 @@ body {
     padding: 1.5rem;
   }
   .about-text {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 1rem;
+    line-height: 1.2rem;
     letter-spacing: 0.2rem;
     text-shadow: 1px 1px 1px #000000;
   }
@@ -275,10 +280,10 @@ body {
   }
   .about-text {
     max-width: 100%;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
     line-height: 1.2rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
   }
 }
 
@@ -407,7 +412,7 @@ body {
 }
 @media screen and (max-width: 500px) {
   .footer {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     min-height: 52px;
   }
   .footer a,

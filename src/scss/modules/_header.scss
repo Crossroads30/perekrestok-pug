@@ -1,9 +1,13 @@
+body.lock {
+    overflow: hidden;
+  }
+
 .header {
     position: relative;
     @include flex;
     width: 100%;
     margin: 0 auto;
-    background: #fff;
+    background: $white-color;
     padding: 2.8rem 5rem;
     &__title {
         @include main-font($size: 1.6rem);
@@ -48,11 +52,6 @@
                 margin-top: -10px;
             }
         }
-        // &:hover span,
-        // &:hover span::after,
-        // &:hover span::before {
-        //     background: #128e69;
-        // }
         &__line,
         &::before,
         &::after {
@@ -81,7 +80,7 @@
             z-index: 10;
             transition: all 0.2s ease-out;
             &__item {
-                @include main-font($size: .8rem);
+                @include main-font($size: 1rem);
                 margin-left: 1rem;
                 margin-bottom: 2rem;
             }
@@ -94,12 +93,13 @@
         }
         &-menu__open {
             left: 0;
+            overflow: hidden;
         }
         
     }
 
     @media screen and (max-width: $laptop) {
-        padding: 1.5rem 3rem;
+        padding: 1.2rem 3rem;
         &__title {
             font-size: 1.2rem;
         }
@@ -113,7 +113,7 @@
     }
 
     @media screen and (max-width: $tablet) {
-        padding: 1.5rem;
+        padding: 1.2rem 1.5rem;
         &__title {
             font-size: 0.8rem;
             text-shadow: 2px 2px 2px $primary-color;
@@ -128,9 +128,9 @@
     }
 
     @media screen and (max-width: $mobile) {
-        padding: 1rem;
+        padding: .8rem 1rem;
         &__title {
-            font-size: 1.2rem;
+            font-size: 1rem;
             letter-spacing: 0.2rem;
             text-shadow: 1px 1px 1px $primary-color;
         }
@@ -142,3 +142,5 @@
         }
     }
 }
+
+
