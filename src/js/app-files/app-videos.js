@@ -1,4 +1,5 @@
 import cards from '../data-js/data.js';
+import Burger from './app-burger.js';
 
 const Videos = document.querySelectorAll('.videos__list-item');
 const MainContent = document.querySelector('.videos');
@@ -34,3 +35,5 @@ export default class App {
         });
     }
 }
+
+const burger = new Burger();
