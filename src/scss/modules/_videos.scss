@@ -1,9 +1,10 @@
 .videos {
     width: 100%;
+    min-height: 100vh;
     background-image: url(../../../src/assets/img/bgrs/videos-bgr.png);
     // background-image: url(../../../assets/img/bgrs/videos-bgr.png);
     background-size: 100% 100%;
-    padding: 5rem;
+    padding: 6rem 5rem;
     &__list {
         @include flex($j-content: space-around);
         flex-wrap: wrap;
@@ -32,6 +33,7 @@
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 .video__field {
@@ -54,10 +56,11 @@
     font-family: 'Geologica';
     width: 100%;
     margin-top: 20px;
+    background: $success-color;
 }
 
 .back-btn:hover {
-  background: $success-color;
+  background: $primary-color;
 }
 
 @media screen and (max-width: 1596px) {
@@ -95,7 +98,7 @@
 
 @media screen and (max-width: 1010px) {
     .videos {
-        padding: 1.2rem;
+        padding: 1.3rem;
         &__list {
             gap: 3%;
         }

@@ -8,7 +8,7 @@ body.lock {
     width: 100%;
     margin: 0 auto;
     background: $white-color;
-    padding: 2.8rem 5rem;
+    padding: 2rem 5rem;
     &__title {
         @include main-font($size: 1.6rem);
     }

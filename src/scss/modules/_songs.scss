@@ -1,19 +1,58 @@
 .songs {
     width: 100%;
+    min-height: 100vh;
     background-image: url(../../../src/assets/img/bgrs/songs-bgr.png);
     // background-image: url(../../../assets/img/bgrs/videos-bgr.png);
     background-size: 100% 100%;
     padding: 6rem;
     &__list {
-        width: 100%;   
+        width: 100%;
     }
     &__list:not(:first-child) {
-      cursor: pointer;
+        cursor: pointer;
+    }
+    @media screen and (max-width: $laptop) {
+        padding: 3rem;
+    }
+    @media screen and (max-width: $tablet) {
+        padding: 1.5rem;
+        .song__wrapper p {
+            font-size: 1rem;
+            text-shadow: 1px 1px 1px $black-color;
+        }
+    }
+    @media screen and (max-width: $mobile) {
+        padding: 1rem;
+        .song__wrapper p {
+          font-size: .6rem;
+      }
+      .text {
+        width: 16rem;
+        &__field {
+        font-size: .8rem;
+        }
+        &__play-btn,
+        &__back-btn,
+        .pause-btn {
+          width: 20px;
+          height: 20px;
+          background-size: 20px 20px;
+        }
+        &__close {
+          width: 7rem;
+        }
+        .back-btn-text {
+          margin-left: 0;
+        }
+      }
+      .song:not(:first-child):hover * {
+        text-shadow: 1px 1px 1px #000000;
+    }
     }
 }
 
 .song {
-  position: relative;
+    position: relative;
     width: 100%;
     &__wrapper {
         width: 100%;
@@ -31,7 +70,7 @@
             $color: $white-color,
             $shadow: 2px 2px 2px $black-color
         );
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     &::after {
         position: absolute;
@@ -43,114 +82,114 @@
         background: #fff;
     }
     &:not(:first-child):hover * {
-      color: $primary-color;
-      text-shadow: 2px 2px 2px #000000;
+        color: $primary-color;
+        text-shadow: 2px 2px 2px #000000;
     }
     &:not(:first-child):hover::after {
-      background: $primary-color;
+        background: $primary-color;
     }
     &:not(:first-child) * {
-      cursor: pointer;
+        cursor: pointer;
     }
     &:first-child {
-      pointer-events: none;
+        pointer-events: none;
     }
 }
 
 .text {
-  @include flex($direction: column);
-  align-self: center;
-  width: 24rem;
-  margin: 0 auto;
-  .btn-wrapper {
-    @include flex();
-    width: 100%;
-  }
-  &__music {
-    @include flex($j-content: flex-start);
-    width: 8rem;
-    margin-bottom: 20px;
-    // border: 2px solid $white-color;
-    border-radius: 50px;
-    padding: 4px 15px 4px 4px;
-    cursor: pointer;
-  }
-  &__music:hover .text__play-btn {
-    background: url("../../../src/assets/icons/player-icon/play_green.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  &__music:hover .pause-btn {
-    background: url("../../../src/assets/icons/player-icon/pause_green.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  &__music:hover p {
-    color: $primary-color;
-  }
-  &__play-btn {
-    width: 30px;
-    height: 30px;
-   
-    background: url("../../../src/assets/icons/player-icon/play.svg");
-    background-size: cover;
-    border: 0;
-    padding: 0;
-  }
-  .btn-text, .back-btn-text {
-    @include main-font($size: 10px, $spacing: 0.2rem, $shadow: none);
-    color: $white-color;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  &__field {
-    @include main-font( $size: 1.1rem, $weight: 400, $height: 1.6rem, $color: $white-color, $spacing: 0);
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 2px #000000;
-    background: $song-text-bgr-color;
-    padding: 20px;
-    pointer-events: none;
-  
-    white-space: pre-line;
-  }
-  &__close {
-    @include flex;
-    width: 8rem;
-    margin-bottom: 20px;
-    // border: 2px solid $white-color;
-    border-radius: 50px;
-    padding: 4px 15px 4px 4px;
-    cursor: pointer;
-  }
-  &__close:hover button {
-    background: url("../../../src/assets/icons/player-icon/icons-close_green.svg");
-    background-size: cover;
-  }
-  &__close:hover p {
-    color: $primary-color;
-  }
-  &__back-btn {
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    background: url("../../../src/assets/icons/player-icon/icons-close.svg");
-    background-size: cover;
-    background-size: 30px 30px;
-    background-repeat: no-repeat;
-    border: 0;
-    padding: 0;
-  }
+    @include flex($direction: column);
+    align-self: center;
+    width: 24rem;
+    margin: 0 auto;
+    .btn-wrapper {
+        @include flex();
+        width: 100%;
+    }
+    &__music {
+        @include flex($j-content: flex-start);
+        width: 8rem;
+        margin-bottom: 20px;
+        // border: 2px solid $white-color;
+        border-radius: 50px;
+        padding: 4px 15px 4px 4px;
+        cursor: pointer;
+    }
+    &__music:hover .text__play-btn {
+        background: url('../../../src/assets/icons/player-icon/play_green.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__music:hover .pause-btn {
+        background: url('../../../src/assets/icons/player-icon/pause_green.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__music:hover p {
+        color: $primary-color;
+    }
+    &__play-btn {
+        width: 30px;
+        height: 30px;
+
+        background: url('../../../src/assets/icons/player-icon/play.svg');
+        background-size: cover;
+        border: 0;
+        padding: 0;
+    }
+    .btn-text,
+    .back-btn-text {
+        @include main-font($size: 10px, $spacing: 0.2rem, $shadow: none);
+        color: $white-color;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    &__field {
+        @include main-font($size: 1.1rem, $weight: 400, $height: 1.6rem, $color: $white-color, $spacing: 0);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 2px #000000;
+        background: $song-text-bgr-color;
+        padding: 20px;
+        pointer-events: none;
+
+        white-space: pre-line;
+    }
+    &__close {
+        @include flex;
+        width: 8rem;
+        margin-bottom: 20px;
+        // border: 2px solid $white-color;
+        border-radius: 50px;
+        padding: 4px 15px 4px 4px;
+        cursor: pointer;
+    }
+    &__close:hover button {
+        background: url('../../../src/assets/icons/player-icon/icons-close_green.svg');
+        background-size: cover;
+    }
+    &__close:hover p {
+        color: $primary-color;
+    }
+    &__back-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        background: url('../../../src/assets/icons/player-icon/icons-close.svg');
+        background-size: cover;
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        border: 0;
+        padding: 0;
+    }
 }
 
 .pause-btn {
-  width: 30px;
-  height: 30px;
-  background: url("../../../src/assets/icons/player-icon/pause.svg");
-  background-size: cover;
-  border: 0;
-  padding: 0;
+    width: 30px;
+    height: 30px;
+    background: url('../../../src/assets/icons/player-icon/pause.svg');
+    background-size: cover;
+    border: 0;
+    padding: 0;
 }
-

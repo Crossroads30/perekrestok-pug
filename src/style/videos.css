@@ -46,7 +46,7 @@ body.lock {
   width: 100%;
   margin: 0 auto;
   background: #ffffff;
-  padding: 2.8rem 5rem;
+  padding: 2rem 5rem;
 }
 .header__title {
   font-family: "Geologica";
@@ -211,9 +211,10 @@ body.lock {
 
 .videos {
   width: 100%;
+  min-height: 100vh;
   background-image: url(../../../src/assets/img/bgrs/videos-bgr.png);
   background-size: 100% 100%;
-  padding: 5rem;
+  padding: 6rem 5rem;
 }
 .videos__list {
   display: -webkit-box;
@@ -268,6 +269,7 @@ body.lock {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 .video__field {
@@ -290,10 +292,11 @@ body.lock {
   font-family: "Geologica";
   width: 100%;
   margin-top: 20px;
+  background: #26de81;
 }
 
 .back-btn:hover {
-  background: #26de81;
+  background: #5ff0c2;
 }
 
 @media screen and (max-width: 1596px) {
@@ -329,7 +332,7 @@ body.lock {
 }
 @media screen and (max-width: 1010px) {
   .videos {
-    padding: 1.2rem;
+    padding: 1.3rem;
   }
   .videos__list {
     gap: 3%;
@@ -377,7 +380,7 @@ body.lock {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  padding: 2.8rem 5rem;
+  padding: 2rem 5rem;
   background: #141414;
 }
 .footer a,
