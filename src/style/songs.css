@@ -218,6 +218,7 @@ body.lock {
 }
 .songs__list {
   width: 100%;
+  margin-bottom: 2rem;
 }
 .songs__list:not(:first-child) {
   cursor: pointer;
