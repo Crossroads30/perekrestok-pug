@@ -1,4 +1,5 @@
 import texts from '../data-js/data-texts.js';
+import Burger from './app-burger.js';
 
 const Songs = document.querySelectorAll('.song');
 const MainContent = document.querySelector('.songs');
@@ -76,3 +77,5 @@ export default class App {
         });
     };
 };
+
+const burger = new Burger();
