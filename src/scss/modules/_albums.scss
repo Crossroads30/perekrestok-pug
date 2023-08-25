@@ -1,94 +1,174 @@
 .albums {
     @include flex($items: flex-start, $j-content: center);
     width: 100%;
-    height: 800px;
-    padding: 6rem;
+    height: 100vh;
+    padding: 10rem 5rem;
     background: url(../../../src/assets/img/bgrs/album-bgr.png);
     // background-image: url(../../../assets/img/bgrs/album-bgr.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     &__wrapper {
-        @include flex($items: none);
-        @include main-font($size: 1rem, $weight: 400);
-        width: 45rem;
-        
+        @include flex();
+        @include main-font($size: 1rem, $weight: 600);
+        width: 75rem;
     }
-}
-
-.album1 {
-    @include flex($direction: column, $j-content: none);
-    cursor: pointer;
-    &__title {
-        padding-bottom: 1.2rem;
+    .album1__wrapper,
+    .album2__wrapper {
+        @include flex($direction: column);
+        width: 35rem;
+        border: 2px solid $primary-color;
+        border-radius: 10px;
+        padding: 15px 25px;
+    }
+    .album1,
+    .album2 {
+        width: 100%;
+        @include flex;
         cursor: pointer;
-    }
-    &__cover {
-        width: 15rem;
-        height: 15rem;
-        background: url(../../../src/assets/img/album-covers/perekrestok-cover.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    }
-    &__release {
-        padding-top: 1.2rem;
-        cursor: pointer;
-    }
-    &__songs {
-        margin-top: 1.2rem;
-        width: 250px;
-        height: 0px;
-        overflow: hidden;
-        background: rgba(101, 224, 138, 0.5);
-        transition: all 0.3s;
-        pointer-events: none;
-        p {
-          padding: 1rem;
-          font-size: .8rem;
-          line-height: 1.2rem;
-          letter-spacing: .1rem;
+        &__title {
+            padding-bottom: 1.2rem;
+            cursor: pointer;
+        }
+        &__cover {
+            width: 15rem;
+            height: 15rem;
+            background: url(../../../src/assets/img/album-covers/perekrestok-cover.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        &__release {
+            padding-top: 1.2rem;
+            cursor: pointer;
+        }
+        &__songs {
+            width: 15rem;
+            height: 15rem;
+            background: rgba(101, 224, 138, 0.5);
+            font-weight: 600;
+            p {
+                padding: 1rem;
+                font-size: 0.8rem;
+                line-height: 1.3rem;
+                letter-spacing: 0rem;
+            }
+        }
+        .album2__cover {
+            background: url(../../../src/assets/img/album-covers/man-on-moon-cover.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
         }
     }
-    &:hover .album1__songs {
-        transition: all 0.3s;
-        height: 230px;
-    }
-}
-
-.album2 {
-    @include flex($direction: column, $j-content: none);
-    cursor: pointer;
-    &__title {
-        padding-bottom: 1.2rem;
-        cursor: pointer;
-    }
-    &__cover {
-        width: 15rem;
-        height: 15rem;
-        background: url(../../../src/assets/img/album-covers/man-on-moon-cover.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    }
-    &__release {
-        padding-top: 1.2rem;
-        cursor: pointer;
-    }
-    &__songs {
-        margin-top: 1.2rem;
-        width: 250px;
-        height: 0px;
-        overflow: hidden;
-        background: rgba(101, 224, 138, 0.5);
-        transition: all 0.3s;
-        pointer-events: none;
-        p {
-          padding: 1rem;
-          font-size: .8rem;
-          line-height: 1.2rem;
-          letter-spacing: .1rem;
+    @media screen and (max-width: $laptop) {
+        padding: 10rem 3rem;
+        &__wrapper {
+            font-size: .7rem;
+            width: 50rem;
+            text-shadow: 2px 2px 2px $primary-color;
+        }
+        .album1__wrapper,
+        .album2__wrapper {
+            width: 20.5rem;
+            padding: 12px;
+        }
+        .album1,
+        .album2 {
+            &__title {
+                padding-bottom: 1rem;
+            }
+            &__cover {
+                width: 9rem;
+                height: 9rem;
+            }
+            &__release {
+                padding-top: 1rem;
+            }
+            &__songs {
+                width: 9rem;
+                height: 9rem;
+                p {
+                    padding: .5rem;
+                    font-size: 0.6rem;
+                    line-height: .8rem;
+                    text-shadow: 2px 2px 2px $primary-color;
+                }
+            }
         }
     }
-    &:hover .album2__songs {
-      transition: all 0.3s;
-      height: 230px;
-  }
+    @media screen and (max-width: $tablet) {
+        padding-top: 3rem;
+        &__wrapper {
+            width: 25rem;
+            height: 32rem;
+            flex-direction: column;  
+            justify-content: space-between;
+        }
+        .album1__wrapper,
+        .album2__wrapper {
+            width: 20.5rem;
+            padding: 12px;
+        }
+        .album1,
+        .album2 {
+            &__title {
+                padding-bottom: 1rem;
+            }
+            &__cover {
+                width: 9rem;
+                height: 9rem;
+            }
+            &__release {
+                padding-top: 1rem;
+            }
+            &__songs {
+                width: 9rem;
+                height: 9rem;
+                p {
+                    padding: .5rem;
+                    font-size: 0.6rem;
+                    line-height: .8rem;
+                    text-shadow: 2px 2px 2px $primary-color;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding-top: 3rem;
+        &__wrapper {
+            width: 20rem;
+            height: 26rem;
+            flex-direction: column;  
+            justify-content: space-between;
+            font-size: .5rem;
+            text-shadow: 1px 1px 1px $primary-color;
+        }
+        .album1__wrapper,
+        .album2__wrapper {
+            width: 18rem;
+            padding: 10px;
+        }
+        .album1,
+        .album2 {
+            &__title {
+                padding-bottom: .6rem;
+            }
+            &__cover {
+                width: 8rem;
+                height: 8rem;
+            }
+            &__release {
+                padding-top: .6rem;
+            }
+            &__songs {
+                width: 8rem;
+                height: 8rem;
+                p {
+                    padding: .4rem;
+                    font-size: 0.5rem;
+                    line-height: .7rem;
+                    text-shadow: 1px 1px 1px $primary-color;
+                }
+            }
+        }
+    }
 }

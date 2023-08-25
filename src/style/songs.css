@@ -46,7 +46,7 @@ body.lock {
   width: 100%;
   margin: 0 auto;
   background: #ffffff;
-  padding: 2.8rem 5rem;
+  padding: 2rem 5rem;
 }
 .header__title {
   font-family: "Geologica";
@@ -211,6 +211,7 @@ body.lock {
 
 .songs {
   width: 100%;
+  min-height: 100vh;
   background-image: url(../../../src/assets/img/bgrs/songs-bgr.png);
   background-size: 100% 100%;
   padding: 6rem;
@@ -220,6 +221,49 @@ body.lock {
 }
 .songs__list:not(:first-child) {
   cursor: pointer;
+}
+@media screen and (max-width: 1366px) {
+  .songs {
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .songs {
+    padding: 1.5rem;
+  }
+  .songs .song__wrapper p {
+    font-size: 1rem;
+    text-shadow: 1px 1px 1px #000000;
+  }
+}
+@media screen and (max-width: 500px) {
+  .songs {
+    padding: 1rem;
+  }
+  .songs .song__wrapper p {
+    font-size: 0.6rem;
+  }
+  .songs .text {
+    width: 16rem;
+  }
+  .songs .text__field {
+    font-size: 0.8rem;
+  }
+  .songs .text__play-btn, .songs .text__back-btn,
+  .songs .text .pause-btn {
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+  }
+  .songs .text__close {
+    width: 7rem;
+  }
+  .songs .text .back-btn-text {
+    margin-left: 0;
+  }
+  .songs .song:not(:first-child):hover * {
+    text-shadow: 1px 1px 1px #000000;
+  }
 }
 
 .song {
@@ -353,7 +397,8 @@ body.lock {
   border: 0;
   padding: 0;
 }
-.text .btn-text, .text .back-btn-text {
+.text .btn-text,
+.text .back-btn-text {
   font-family: "Geologica";
   font-style: normal;
   font-size: 10px;
@@ -448,7 +493,7 @@ body.lock {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  padding: 2.8rem 5rem;
+  padding: 2rem 5rem;
   background: #141414;
 }
 .footer a,

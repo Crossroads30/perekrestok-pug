@@ -46,7 +46,7 @@ body.lock {
   width: 100%;
   margin: 0 auto;
   background: #ffffff;
-  padding: 2.8rem 5rem;
+  padding: 2rem 5rem;
 }
 .header__title {
   font-family: "Geologica";
@@ -224,8 +224,8 @@ body.lock {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 800px;
-  padding: 6rem;
+  height: 100vh;
+  padding: 10rem 5rem;
   background: url(../../../src/assets/img/bgrs/album-bgr.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -238,24 +238,24 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-family: "Geologica";
   font-style: normal;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 0.3rem;
   color: #000000;
   text-shadow: 3px 3px 3px #5ff0c2;
-  width: 45rem;
+  width: 75rem;
 }
-
-.album1 {
+.albums .album1__wrapper,
+.albums .album2__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,99 +266,203 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 35rem;
+  border: 2px solid #5ff0c2;
+  border-radius: 10px;
+  padding: 15px 25px;
+}
+.albums .album1,
+.albums .album2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   cursor: pointer;
 }
-.album1__title {
+.albums .album1__title,
+.albums .album2__title {
   padding-bottom: 1.2rem;
   cursor: pointer;
 }
-.album1__cover {
+.albums .album1__cover,
+.albums .album2__cover {
   width: 15rem;
   height: 15rem;
   background: url(../../../src/assets/img/album-covers/perekrestok-cover.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-.album1__release {
+.albums .album1__release,
+.albums .album2__release {
   padding-top: 1.2rem;
   cursor: pointer;
 }
-.album1__songs {
-  margin-top: 1.2rem;
-  width: 250px;
-  height: 0px;
-  overflow: hidden;
-  background: rgba(101, 224, 138, 0.5);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  pointer-events: none;
-}
-.album1__songs p {
-  padding: 1rem;
-  font-size: 0.8rem;
-  line-height: 1.2rem;
-  letter-spacing: 0.1rem;
-}
-.album1:hover .album1__songs {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 230px;
-}
-
-.album2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
-  cursor: pointer;
-}
-.album2__title {
-  padding-bottom: 1.2rem;
-  cursor: pointer;
-}
-.album2__cover {
+.albums .album1__songs,
+.albums .album2__songs {
   width: 15rem;
   height: 15rem;
+  background: rgba(101, 224, 138, 0.5);
+  font-weight: 600;
+}
+.albums .album1__songs p,
+.albums .album2__songs p {
+  padding: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  letter-spacing: 0rem;
+}
+.albums .album1 .album2__cover,
+.albums .album2 .album2__cover {
   background: url(../../../src/assets/img/album-covers/man-on-moon-cover.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-.album2__release {
-  padding-top: 1.2rem;
-  cursor: pointer;
+@media screen and (max-width: 1366px) {
+  .albums {
+    padding: 10rem 3rem;
+  }
+  .albums__wrapper {
+    font-size: 0.7rem;
+    width: 50rem;
+    text-shadow: 2px 2px 2px #5ff0c2;
+  }
+  .albums .album1__wrapper,
+  .albums .album2__wrapper {
+    width: 20.5rem;
+    padding: 12px;
+  }
+  .albums .album1__title,
+  .albums .album2__title {
+    padding-bottom: 1rem;
+  }
+  .albums .album1__cover,
+  .albums .album2__cover {
+    width: 9rem;
+    height: 9rem;
+  }
+  .albums .album1__release,
+  .albums .album2__release {
+    padding-top: 1rem;
+  }
+  .albums .album1__songs,
+  .albums .album2__songs {
+    width: 9rem;
+    height: 9rem;
+  }
+  .albums .album1__songs p,
+  .albums .album2__songs p {
+    padding: 0.5rem;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+    text-shadow: 2px 2px 2px #5ff0c2;
+  }
 }
-.album2__songs {
-  margin-top: 1.2rem;
-  width: 250px;
-  height: 0px;
-  overflow: hidden;
-  background: rgba(101, 224, 138, 0.5);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  pointer-events: none;
+@media screen and (max-width: 768px) {
+  .albums {
+    padding-top: 3rem;
+  }
+  .albums__wrapper {
+    width: 25rem;
+    height: 32rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .albums .album1__wrapper,
+  .albums .album2__wrapper {
+    width: 20.5rem;
+    padding: 12px;
+  }
+  .albums .album1__title,
+  .albums .album2__title {
+    padding-bottom: 1rem;
+  }
+  .albums .album1__cover,
+  .albums .album2__cover {
+    width: 9rem;
+    height: 9rem;
+  }
+  .albums .album1__release,
+  .albums .album2__release {
+    padding-top: 1rem;
+  }
+  .albums .album1__songs,
+  .albums .album2__songs {
+    width: 9rem;
+    height: 9rem;
+  }
+  .albums .album1__songs p,
+  .albums .album2__songs p {
+    padding: 0.5rem;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+    text-shadow: 2px 2px 2px #5ff0c2;
+  }
 }
-.album2__songs p {
-  padding: 1rem;
-  font-size: 0.8rem;
-  line-height: 1.2rem;
-  letter-spacing: 0.1rem;
-}
-.album2:hover .album2__songs {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 230px;
+@media screen and (max-width: 500px) {
+  .albums {
+    padding-top: 3rem;
+  }
+  .albums__wrapper {
+    width: 20rem;
+    height: 26rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 0.5rem;
+    text-shadow: 1px 1px 1px #5ff0c2;
+  }
+  .albums .album1__wrapper,
+  .albums .album2__wrapper {
+    width: 18rem;
+    padding: 10px;
+  }
+  .albums .album1__title,
+  .albums .album2__title {
+    padding-bottom: 0.6rem;
+  }
+  .albums .album1__cover,
+  .albums .album2__cover {
+    width: 8rem;
+    height: 8rem;
+  }
+  .albums .album1__release,
+  .albums .album2__release {
+    padding-top: 0.6rem;
+  }
+  .albums .album1__songs,
+  .albums .album2__songs {
+    width: 8rem;
+    height: 8rem;
+  }
+  .albums .album1__songs p,
+  .albums .album2__songs p {
+    padding: 0.4rem;
+    font-size: 0.5rem;
+    line-height: 0.7rem;
+    text-shadow: 1px 1px 1px #5ff0c2;
+  }
 }
 
 .footer {
@@ -376,7 +480,7 @@ body.lock {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  padding: 2.8rem 5rem;
+  padding: 2rem 5rem;
   background: #141414;
 }
 .footer a,
