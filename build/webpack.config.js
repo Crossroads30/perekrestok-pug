@@ -1,4 +1,5 @@
 const path = require('path');
+const glob = require('glob');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -15,14 +16,26 @@ const PATHS = {
 const PAGES_DIR = `${PATHS.src}/pug/pages`;
 const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith('.pug'));
 
+function toObject(paths) {
+    const entry = {};
+    paths.forEach(function(p) {
+        const name = path.basename(p, '.js');
+        entry[name] = p;
+    });
+    return entry;
+}
+
 module.exports = {
     mode: 'development',
-    entry: {
-        app: PATHS.src,
-        module: `${PATHS.src}/index.js`,
-    },
+    // entry: {
+    //     app: PATHS.src,
+    //     module: `${PATHS.src}/about.js`,
+    //     module: `${PATHS.src}/videos.js`,
+    // },
+    entry: toObject(glob.sync('./src/*.js')),
     output: {
         filename: `js/[name].[hash].js`,
+        // filename: '[name].js',
         path: PATHS.dist,
         publicPath: '/',
         clean: true,
@@ -127,6 +140,10 @@ module.exports = {
                 {
                     from: `${PATHS.src}/assets/favicon`,
                     to: `${PATHS.dist}`,
+                },
+                {
+                    from: `${PATHS.src}/js`,
+                    to: `${PATHS.dist}/js`,
                 },
             ],
         }),
