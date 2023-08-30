@@ -6,8 +6,10 @@ const MainContent = document.querySelector('.videos');
 
 export default class App {
     constructor() {
+        // this.setRouter();
         this.createYoutubeView();
         this.setCallback();
+        
     }
 
     /**
@@ -25,6 +27,7 @@ export default class App {
                     </div>
                     <button class="back-btn">Назад...</button>
                 </div>`;
+                
             });
         });
     }
@@ -33,6 +36,35 @@ export default class App {
         MainContent.addEventListener('click', function (e) {
             if (e.target.classList.contains('back-btn') || e.target.closest('.back-btn')) document.location.reload();
         });
+    }
+
+    setRouter() {
+        document.addEventListener('click', event => {
+            // console.log(event.target.tagName);
+            if (event.target.tagName === 'A') { 
+                route(event);
+            }
+            event.preventDefault();
+        });
+
+        const route = (event) => {
+            window.history.pushState({}, '', event.target.href);
+            handleLocation();
+        }
+
+        const router = {
+            '/': 'videos.html',
+            '/video': 'video.html'
+        }
+
+        const handleLocation = async() => {
+            const path = window.location.pathname;
+            const html = await fetch(router[path]).then((data) => data.text());
+            document.querySelector('.videos').innerHTML = html;
+        }
+        document.querySelector('.videos').onpopstate = handleLocation();
+        document.querySelector('.videos').route = route;
+        handleLocation();
     }
 }
 
