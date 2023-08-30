@@ -18,7 +18,7 @@ const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith('
 
 function toObject(paths) {
     const entry = {};
-    paths.forEach(function(p) {
+    paths.forEach(function (p) {
         const name = path.basename(p, '.js');
         entry[name] = p;
     });
@@ -129,22 +129,26 @@ module.exports = {
                     from: `${PATHS.src}/style`,
                     to: `${PATHS.dist}/style`,
                 },
+                // {
+                //     from: `${PATHS.src}/assets/fonts`,
+                //     to: `${PATHS.dist}/assets/fonts`,
+                // },
+                // {
+                //     from: `${PATHS.src}/assets/img`,
+                //     to: `${PATHS.dist}/assets/img`,
+                // },
+                // {
+                //     from: `${PATHS.src}/assets/favicon`,
+                //     to: `${PATHS.dist}`,
+                // },
                 {
-                    from: `${PATHS.src}/assets/fonts`,
-                    to: `${PATHS.dist}/assets/fonts`,
+                    from: `${PATHS.src}/assets`,
+                    to: `${PATHS.dist}/assets`,
                 },
-                {
-                    from: `${PATHS.src}/assets/img`,
-                    to: `${PATHS.dist}/assets/img`,
-                },
-                {
-                    from: `${PATHS.src}/assets/favicon`,
-                    to: `${PATHS.dist}`,
-                },
-                {
-                    from: `${PATHS.src}/js`,
-                    to: `${PATHS.dist}/js`,
-                },
+                // {
+                //     from: `${PATHS.src}/js`,
+                //     to: `${PATHS.dist}/js`,
+                // },
             ],
         }),
         // new PugPlugin({
