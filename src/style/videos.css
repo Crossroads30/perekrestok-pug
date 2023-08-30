@@ -321,7 +321,6 @@ body.lock {
     gap: 4%;
   }
   .videos__title {
-    font-size: 0.4rem;
     padding-bottom: 8px;
     text-shadow: 0.2rem 0.2rem 0.2rem #000000;
   }
