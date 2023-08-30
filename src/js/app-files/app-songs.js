@@ -22,6 +22,7 @@ export default class App {
             element.addEventListener('click', () => {
                 const id = element.id;
                 myAudio.src = texts[`${id - 1}`].src;
+                myAudio.id = 'audio';
                 MainContent.innerHTML = `<div class="text">
                     <div class="btn-wrapper">
                         <div class="text__music">
@@ -48,14 +49,14 @@ export default class App {
                 </div>`;
             });
         });
-    };
+    }
 
     setCallback() {
         MainContent.addEventListener('click', function (e) {
             if (e.target.classList.contains('text__close') || e.target.closest('.text__close'))
                 document.location.reload();
         });
-    };
+    }
 
     createSongPlayer() {
         MainContent.addEventListener('click', function (e) {
@@ -63,19 +64,27 @@ export default class App {
                 if (!isPlay) {
                     myAudio.play();
                     document.querySelectorAll('.text__play-btn').forEach((elem) => elem.classList.add('pause-btn'));
-                    document.querySelectorAll('.text__play-btn').forEach((elem) => elem.classList.remove('text__play-btn'));
-                    document.querySelectorAll('.btn-text').forEach((elem) => elem.textContent = 'Пауза');
+                    document
+                        .querySelectorAll('.text__play-btn')
+                        .forEach((elem) => elem.classList.remove('text__play-btn'));
+                    document.querySelectorAll('.btn-text').forEach((elem) => (elem.textContent = 'Пауза'));
                     isPlay = true;
                 } else if (isPlay) {
                     myAudio.pause();
                     document.querySelectorAll('.pause-btn').forEach((elem) => elem.classList.add('text__play-btn'));
                     document.querySelectorAll('.pause-btn').forEach((elem) => elem.classList.remove('pause-btn'));
-                    document.querySelectorAll('.btn-text').forEach((elem) => elem.textContent = 'Слушать');
+                    document.querySelectorAll('.btn-text').forEach((elem) => (elem.textContent = 'Слушать'));
                     isPlay = false;
-                };
-            };
+                }
+            }
         });
-    };
-};
+        myAudio.addEventListener('ended', function () {
+            document.querySelectorAll('.pause-btn').forEach((elem) => elem.classList.add('text__play-btn'));
+            document.querySelectorAll('.pause-btn').forEach((elem) => elem.classList.remove('pause-btn'));
+            document.querySelectorAll('.btn-text').forEach((elem) => (elem.textContent = 'Слушать'));
+            isPlay = false;
+        });
+    }
+}
 
 const burger = new Burger();
