@@ -235,7 +235,7 @@ body.lock {
 }
 .videos__item-link {
   display: block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   width: 450px;
 }
 .videos__title {
@@ -304,13 +304,13 @@ body.lock {
     padding: 3rem;
   }
   .videos__title {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     padding-bottom: 10px;
     text-shadow: 0.2rem 0.2rem 0.2rem #000000;
   }
   .videos__item-link {
     width: 350px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 @media screen and (max-width: 1366px) {
@@ -321,8 +321,10 @@ body.lock {
     gap: 4%;
   }
   .videos__title {
-    padding-bottom: 8px;
-    text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    padding-bottom: 0.2rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #000000;
   }
   .videos__item-link {
     width: 300px;
@@ -337,9 +339,7 @@ body.lock {
     gap: 3%;
   }
   .videos__title {
-    font-size: 0.4rem;
-    padding-bottom: 8px;
-    text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+    font-size: 0.6rem;
   }
   .videos__item-link {
     width: 220px;
@@ -354,10 +354,10 @@ body.lock {
     gap: 3%;
   }
   .videos__title {
-    font-size: 0.3rem;
-    letter-spacing: 0.2rem;
-    padding-bottom: 5px;
-    text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+    font-size: 0.6rem;
+    padding-bottom: 0.125rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #000000;
   }
   .videos__item-link {
     width: 180px;
